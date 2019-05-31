@@ -4,11 +4,12 @@
   "private": true,
   "dependencies": {
     "@dhis2/app-runtime": "^1.2.0",
-    "@dhis2/ui-core": "^2.4.3",
+    "@dhis2/ui-core": "^2.5.1",
     "@dhis2/ui-widgets": "^1.0.3",
     "react": "^16.8.6",
     "react-dom": "^16.8.6",
-    "react-scripts": "3.0.1"
+    "styled-components": "^4.2.1",
+    "typeface-roboto": "^0.0.54"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -16,19 +17,10 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
-  "eslintConfig": {
-    "extends": "react-app"
-  },
-  "browserslist": {
-    "production": [
-      ">0.2%",
-      "not dead",
-      "not op_mini all"
-    ],
-    "development": [
-      "last 1 chrome version",
-      "last 1 firefox version",
-      "last 1 safari version"
-    ]
+  "devDependencies": {
+    "@dhis2/cli-style": "^3.2.2",
+    "husky": "^2.3.0",
+    "moment": "^2.24.0",
+    "react-scripts": "3.0.1"
   }
 }

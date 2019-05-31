@@ -1,10 +1,14 @@
 import React from 'react'
-import { Header } from '..'
+import { Header, Sidebar } from '..'
+import { BodyStyle, Container } from './style'
 
 export const App = () => (
     <>
+        <BodyStyle />
         <Header/>
-        <p>Hello world!</p>
+        <Container>
+            <Sidebar/>
+        </Container>
     </>
 )
 
