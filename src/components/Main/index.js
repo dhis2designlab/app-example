@@ -1,5 +1,6 @@
 import React from 'react'
-import { InputField, Button, Card } from '@dhis2/ui-core'
+import { shape, string } from 'prop-types'
+import { InputField, Button } from '@dhis2/ui-core'
 import { useCode } from './useCode'
 import { Container, StyledCard, ButtonContainer } from './style'
 import { setOrgUnitCode } from '../../api'
@@ -54,4 +55,11 @@ export const Main = ({ orgUnit }) => {
             </StyledCard>
         </Container>
     )
+}
+
+Main.propTypes = {
+    orgUnit: shape({
+        name: string.isRequired,
+        code: string,
+    }).isRequired,
 }

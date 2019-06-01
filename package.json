@@ -26,6 +26,7 @@
         "@dhis2/app-runtime": "^1.2.0",
         "@dhis2/ui-core": "^2.5.1",
         "@dhis2/ui-widgets": "^1.0.3",
+        "prop-types": "^15.7.2",
         "react": "^16.8.6",
         "react-dom": "^16.8.6",
         "styled-components": "^4.2.1",
