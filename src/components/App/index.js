@@ -1,16 +1,12 @@
 import React from 'react'
-import { Header, Sidebar } from '..'
-import { BodyStyle, Container } from './style'
+import { Header } from '..'
+import { BodyStyle } from './style'
+import { Content } from '../Content'
 
-export const App = () => (
+export const App = ({ baseUrl, appName, apiVersion }) => (
     <>
         <BodyStyle />
-        <Header/>
-        <Container>
-            <Sidebar/>
-        </Container>
+        <Header baseUrl={baseUrl} appName={appName} apiVersion={apiVersion} />
+        <Content />
     </>
 )
-
-
-

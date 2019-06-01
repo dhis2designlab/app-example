@@ -1,26 +1,51 @@
 {
-  "name": "app-base",
-  "version": "0.1.0",
-  "private": true,
-  "dependencies": {
-    "@dhis2/app-runtime": "^1.2.0",
-    "@dhis2/ui-core": "^2.5.1",
-    "@dhis2/ui-widgets": "^1.0.3",
-    "react": "^16.8.6",
-    "react-dom": "^16.8.6",
-    "styled-components": "^4.2.1",
-    "typeface-roboto": "^0.0.54"
-  },
-  "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
-  },
-  "devDependencies": {
-    "@dhis2/cli-style": "^3.2.2",
-    "husky": "^2.3.0",
-    "moment": "^2.24.0",
-    "react-scripts": "3.0.1"
-  }
+    "name": "ou-code",
+    "description": "DHIS2 app for changing organisation unit codes",
+    "version": "0.1.0",
+    "private": true,
+    "developer": {
+        "name": "Terje Uglebakken"
+    },
+    "license": "MIT",
+    "icons": {
+        "48": "favicon-48x48.png"
+    },
+    "manifest.webapp": {
+        "activities": {
+            "dhis": {
+                "href": ".."
+            }
+        },
+        "launch_path": "index.html"
+    },
+    "dependencies": {
+        "@dhis2/app-runtime": "^1.2.0",
+        "@dhis2/ui-core": "^2.5.1",
+        "@dhis2/ui-widgets": "^1.0.3",
+        "react": "^16.8.6",
+        "react-dom": "^16.8.6",
+        "styled-components": "^4.2.1",
+        "typeface-roboto": "^0.0.54"
+    },
+    "scripts": {
+        "start": "react-scripts start",
+        "prebuild": "rm -rf build",
+        "build": "react-scripts build && d2-manifest package.json build/manifest.webapp",
+        "postbuild": "rm -f ou-code.zip && cd build && zip -r -X ../ou-code.zip .",
+        "test": "react-scripts test",
+        "eject": "react-scripts eject"
+    },
+    "devDependencies": {
+        "@dhis2/cli-style": "^3.2.2",
+        "d2-manifest": "^1.0.0",
+        "husky": "^2.3.0",
+        "moment": "^2.24.0",
+        "react-scripts": "3.0.1"
+    },
+    "husky": {
+        "hooks": {
+            "commit-msg": "d2-style commit check",
+            "pre-commit": "d2-style js apply"
+        }
+    }
 }

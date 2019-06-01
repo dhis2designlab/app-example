@@ -1,11 +1,10 @@
 import React from 'react'
-
-import { Container } from './style'
-import { Tree } from '../Tree';
+import { Container, Title } from './style'
+import { Tree } from '../Tree'
 
 export const Sidebar = () => (
     <Container>
-        <h1>App</h1>
-        <Tree/>
+        <Title>OU Code</Title>
+        <Tree />
     </Container>
 )
