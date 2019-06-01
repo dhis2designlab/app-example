@@ -1,22 +1,26 @@
 {
-    "name": "ou-code",
-    "description": "DHIS2 app for changing organisation unit codes",
+    "name": "example-app",
+    "description": "DHIS2 example app",
+    "homepage": ".",
     "version": "0.1.0",
     "private": true,
     "developer": {
-        "name": "Terje Uglebakken"
+        "name": "Terje Uglebakken",
+        "email": "terjeug@ifi.uio.no",
+        "url": "https://dhis2designlab.github.io/"
     },
     "license": "MIT",
     "icons": {
         "48": "favicon-48x48.png"
     },
     "manifest.webapp": {
+        "name": "Organisation Unit Code",
+        "description": "Change organisation unit codes.",
         "activities": {
             "dhis": {
-                "href": ".."
+                "href": "*"
             }
-        },
-        "launch_path": "index.html"
+        }
     },
     "dependencies": {
         "@dhis2/app-runtime": "^1.2.0",
