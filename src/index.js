@@ -5,7 +5,7 @@ import { App } from './components'
 import { setBaseUrl } from './api'
 
 const appName = 'Organisation Unit Code'
-const developmentServer = 'https://play.dhis2.org/2.32.0'
+const developmentServer = 'https://play.dhis2.org/2.32.1'
 const apiVersion = 32
 const rootElement = document.getElementById('root')
 
