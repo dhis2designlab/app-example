@@ -1,8 +1,16 @@
 import React from 'react'
 import { number, string } from 'prop-types'
-import { Header } from '..'
-import { BodyStyle } from './style'
-import { Content } from '../Content'
+import { createGlobalStyle } from 'styled-components'
+import { Header, Content } from '.'
+import 'typeface-roboto'
+
+const BodyStyle = createGlobalStyle`
+    body {
+        margin: 0;
+        background-color: rgba(0,0,10,.05);
+        font-family: Roboto;
+    }
+`
 
 export const App = ({ baseUrl, appName, apiVersion }) => (
     <>

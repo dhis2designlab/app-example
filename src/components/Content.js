@@ -1,7 +1,13 @@
 import React, { useState, useEffect } from 'react'
-import { Sidebar, Main } from '..'
-import { getOrgUnit } from '../../api'
-import { Container } from './style'
+import styled from 'styled-components'
+import { Sidebar, Main } from '.'
+import { getOrgUnit } from '../api'
+
+const Container = styled.section`
+    display: flex;
+    margin-top: 48px;
+    min-height: calc(100vh - 48px);
+`
 
 export const Content = () => {
     const [orgUnit, setOrgUnit] = useState(null)
