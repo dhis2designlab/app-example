@@ -12,21 +12,14 @@ const Container = styled.section`
 export const Content = () => {
     const [orgUnit, setOrgUnit] = useState(null)
 
-    useEffect(() => {
-        const init = async () => {
-            const data = await getOrgUnit('O6uvpzGd5pu')
-            if (!data) return
-            setOrgUnit(data)
-        }
-        init()
-    }, [])
+    const getData = async id => setOrgUnit(await getOrgUnit(id))
 
-    if (!orgUnit) return null
+    const onSelect = id => getData(id)
 
     return (
         <Container>
-            <Sidebar />
-            <Main orgUnit={orgUnit} />
+            <Sidebar onSelect={onSelect} />
+            {orgUnit && <Main orgUnit={orgUnit} />}
         </Container>
     )
 }

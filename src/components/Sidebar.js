@@ -14,9 +14,9 @@ const Title = styled.h1`
     font-size: 2rem;
 `
 
-export const Sidebar = () => (
+export const Sidebar = ({ onSelect }) => (
     <Container>
         <Title>OU Code</Title>
-        <Tree />
+        <Tree onSelect={onSelect} />
     </Container>
 )
